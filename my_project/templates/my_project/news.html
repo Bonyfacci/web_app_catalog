@@ -1,0 +1,60 @@
+{% extends 'my_project/my_layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="bg-warning features">
+        <h1>Свежие новости</h1>
+        <div class="row text-center center">
+            <div class="col-4">
+                <div class="card mb-4 box-shadow">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal text-dark">Одиночная сессия</h4>
+                    </div>
+                    <div class="card-body text-dark">
+                        <h1 class="card-title pricing-card-title">$ 100</h1>
+                        <ul class="list-unstyled mt-3 mb-4 text-start m-3">
+                            <li>- Раз</li>
+                            <li>- Два</li>
+                            <li>- Три</li>
+                        </ul>
+                        <button type="button" class="btn btn-lg btn-block btn-outline-success">Купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card mb-4 box-shadow">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal text-dark">Семейная сессия</h4>
+                    </div>
+                    <div class="card-body text-dark">
+                        <h1 class="card-title pricing-card-title">$ 150</h1>
+                        <ul class="list-unstyled mt-3 mb-4 text-start m-3">
+                            <li>- Раз</li>
+                            <li>- Два</li>
+                            <li>- Три</li>
+                        </ul>
+                        <button type="button" class="btn btn-lg btn-block btn-outline-success">Купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card mb-4 box-shadow">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal text-dark">Менторство</h4>
+                    </div>
+                    <div class="card-body text-dark">
+                        <h1 class="card-title pricing-card-title">$ 250</h1>
+                        <ul class="list-unstyled mt-3 mb-4 text-start m-3">
+                            <li>- Раз</li>
+                            <li>- Два</li>
+                            <li>- Три</li>
+                        </ul>
+                        <button type="button" class="btn btn-lg btn-block btn-outline-success">Купить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>На этой странице представлены самые актуальные новости</p>
+    </div>
+{% endblock %}
