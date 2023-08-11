@@ -24,3 +24,7 @@ def info(request):
         print(f'Имя: {name}\nТелефон: {phone}\nСообщение: {message}')
 
     return render(request, 'my_project/info.html')
+
+
+def test(request):
+    return render(request, 'my_project/test.html')
