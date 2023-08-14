@@ -7,9 +7,10 @@ def my_project(request):
 
 
 def about(request):
-    news = Articles.objects.all()
+    # news = Articles.objects.all()
     # news = Articles.objects.order_by('-date')
-    return render(request, 'my_project/about.html', {'news': news})
+    # return render(request, 'my_project/about.html', {'news': news})
+    return render(request, 'my_project/about.html')
 
 
 def news(request):
