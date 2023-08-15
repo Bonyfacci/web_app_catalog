@@ -1,0 +1,80 @@
+[
+    {
+        "model": "catalog.product",
+        "pk": 1,
+        "fields": {
+            "name": "Яблоко",
+            "description": "Зеленое",
+            "photo": "",
+            "category": 1,
+            "price": 50,
+            "date_created": "2023-08-14",
+            "date_updated": null
+        }
+    },
+    {
+        "model": "catalog.product",
+        "pk": 2,
+        "fields": {
+            "name": "Банан",
+            "description": "Желтый",
+            "photo": "",
+            "category": 1,
+            "price": 35,
+            "date_created": "2023-08-14",
+            "date_updated": null
+        }
+    },
+    {
+        "model": "catalog.product",
+        "pk": 3,
+        "fields": {
+            "name": "Телефон",
+            "description": "iPhone",
+            "photo": "",
+            "category": 2,
+            "price": 1000,
+            "date_created": "2023-08-14",
+            "date_updated": null
+        }
+    },
+    {
+        "model": "catalog.product",
+        "pk": 4,
+        "fields": {
+            "name": "Планшет",
+            "description": "iPad",
+            "photo": "",
+            "category": 2,
+            "price": 1500,
+            "date_created": "2023-08-14",
+            "date_updated": null
+        }
+    },
+    {
+        "model": "catalog.product",
+        "pk": 5,
+        "fields": {
+            "name": "Джинсы",
+            "description": "Levis",
+            "photo": "",
+            "category": 3,
+            "price": 200,
+            "date_created": "2023-08-14",
+            "date_updated": null
+        }
+    },
+    {
+        "model": "catalog.product",
+        "pk": 6,
+        "fields": {
+            "name": "Смокинг",
+            "description": "Brioni",
+            "photo": "",
+            "category": 3,
+            "price": 5000,
+            "date_created": "2023-08-14",
+            "date_updated": null
+        }
+    }
+]
