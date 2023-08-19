@@ -28,7 +28,7 @@ class Command(BaseCommand):
             product_for_create.append(
                 Product(name=product['fields']['name'],
                                            description=product['fields']['description'],
-                                           category=Category.objects.get(pk=product['fields']['category']),
+                                           category_id=str(product['fields']['category']),
                                            price=product['fields']['price'])
             )
         Product.objects.bulk_create(product_for_create)
