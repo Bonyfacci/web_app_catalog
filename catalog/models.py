@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.urls import reverse
 
 NULLABLE = {'null': True, 'blank': True}
 
@@ -31,3 +31,24 @@ class Product(models.Model):
     class Meta:
         verbose_name = 'продукт'
         verbose_name_plural = 'продукты'
+
+
+class News(models.Model):
+    title = models.CharField(max_length=255, verbose_name='Наименование')
+    slug = models.SlugField(max_length=255, verbose_name='Ссылка', **NULLABLE)
+    content = models.TextField(**NULLABLE, verbose_name='Содержимое')
+    photo = models.ImageField(upload_to='news/', **NULLABLE, verbose_name='Фото')
+    created_at = models.DateTimeField(**NULLABLE, verbose_name='Дата публикации')
+    is_active = models.BooleanField(default=True, verbose_name='Публикация статьи')
+    views_count = models.IntegerField(default=0, verbose_name='Просмотры')
+
+    def __str__(self):
+        return f'{self.title} {self.content}'
+
+    def get_absolute_url(self):
+        return reverse('news_detail', kwargs={'slug': self.slug})
+
+    class Meta:
+        verbose_name = 'Новость'
+        verbose_name_plural = 'Новости'
+        ordering = ('created_at', )

@@ -1,0 +1,22 @@
+{% load my_tags %}
+
+<div class="col-3">
+    <div class="card mb-4 box-shadow">
+        <div class="card-header" style="height:150px">
+            <h4 class="my-0 font-weight-normal">{{ object.title|title }}</h4>
+        </div>
+        <div class="card-body">
+            <img class="img-thumbnail" src="{{ object.photo|mymedia }}" style="height:150px" alt="news">
+<!--            <h3 class="card-title pricing-card-title">{{ object.title }}</h3>-->
+            <div class="card-body" style="height:150px">
+                <p>{{ object.content|slice:100 }}</p>
+            </div>
+            <div class="row d-grid gap-2 d-md-flex justify-content-md-center text-center">
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary col-4">Купить</button>
+                <a href="{% url 'catalog:news_article' object.pk %}" class="btn btn-lg btn-block btn-outline-success col-7">Читать далее</a>
+                <a href="{% url 'catalog:news_edit' object.pk %}" class="btn btn-sm btn-block btn-outline-warning col-12">Редактировать</a>
+                <a href="{% url 'catalog:news_delete' object.pk %}" class="btn btn-sm btn-block btn-outline-danger col-12">Удалить</a>
+            </div>
+        </div>
+    </div>
+</div>
