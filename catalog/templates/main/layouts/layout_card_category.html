@@ -1,10 +1,10 @@
-<div class="col-3">
+<div class="col-4">
     <div class="card mb-4 box-shadow">
         <div class="card-header">
             <h4 class="my-0 font-weight-normal">{{ object.name }}</h4>
         </div>
         <div class="card-body">
-            <p>{{ object.description|slice:100 }}</p>
+            <p>{{ object.description|slice:120 }}</p>
         </div>
             <a href="{% url 'catalog:products' object.pk %}" class="btn btn-lg btn-block btn-outline-success">Посмотреть товары</a>
     </div>
