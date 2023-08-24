@@ -89,6 +89,9 @@ def contacts(request):
 class NewsListView(ListView):
     model = News
     template_name = 'news/blog.html'
+    extra_context = {
+        'title': f'Новости Castellsefels'
+    }
 
     def get_queryset(self, *args, **kwargs):
         queryset = super().get_queryset(*args, **kwargs)
