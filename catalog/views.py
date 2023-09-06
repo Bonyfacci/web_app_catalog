@@ -97,6 +97,7 @@ class ArticleDetailView (DetailView):
 
         product_name = Product.objects.get(pk=self.kwargs.get('pk'))
         context_data['title'] = f'Каталог товаров - {product_name.name}'
+        context_data['versions'] = Version.objects.all()
 
         return context_data
 

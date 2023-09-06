@@ -13,23 +13,42 @@
 </div>
 
 <div class="container">
-    <div class="row featurette box-shadow">
+    <div class="row mb-5 featurette box-shadow">
         <div class="col-md-7  text-center">
             <h4 class="my-0 font-weight-normal">{{ object.name|title }}</h4>
             <p>{{ object.description|slice:10 }}</p>
             <p>{{ object.description }}</p>
         </div>
         <div class="col-md-5 justify-content-center">
-            <img class="card-img-top img-thumbnail" width="auto" height="100" src="{{ object.photo|mymedia }}" alt="product">
+            <img class="card-img-top img-thumbnail" width="auto" height="100" src="{{ object.photo|mymedia }}"
+                 alt="product">
         </div>
         <div class="row d-grid gap-3 d-md-flex justify-content-md-center text-center">
             <h1 class="card-title pricing-card-title">{{ object.price }} $</h1>
             <button type="button" class="btn btn-lg btn-block btn-outline-primary col-3">Купить</button>
             <a href="{% url 'catalog:product_edit' object.pk %}" class="btn btn-lg btn-block btn-outline-warning col-3">Редактировать</a>
-            <a href="{% url 'catalog:product_delete' object.pk %}" class="btn btn-sm btn-block btn-outline-danger col-6">Удалить</a>
+            <a href="{% url 'catalog:product_delete' object.pk %}"
+               class="btn btn-sm btn-block btn-outline-danger col-6">Удалить</a>
         </div>
     </div>
-
-    {% endblock %}
-
+    <div class="col-12 text-center mb-5">
+        <h4 class="my-0 font-weight-normal">Версии продукта:</h4>
+    </div>
+    <div class="row text-center">
+        {% for object in versions %}
+        <div class="col-3">
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">{{ object.product.name|title }}</h4>
+                </div>
+                <div class="card-body">
+                    <p>Номер версии: {{ object.version_number }}</p>
+                    <p>Название версии: {{ object.version_name }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </div>
+
+{% endblock %}
