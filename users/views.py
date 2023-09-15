@@ -99,7 +99,7 @@ class VerifiedEmailView(View):
                 return redirect('users:login')
         except User.DoesNotExist:
             pass
-        return redirect('users:login')
+        return redirect('users:verified_email')
 
 
 class UserUpdateView(UpdateView):
