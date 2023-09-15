@@ -14,14 +14,14 @@
 <div class="container">
     <div class="row">
         <div class="card-body">
-            <form method="post" class="row">
+            <form method="post" class="row" enctype="multipart/form-data">
                 <div class="col-6">
                     <div class="card">
                         <div class="card-header">
                             {% if object %}
-                                Редактирование продукта
+                                <h4 class="my-0 font-weight-normal">Редактирование продукта</h4>
                             {% else %}
-                                Добавление продукта
+                                <h4 class="my-0 font-weight-normal">Добавление продукта</h4>
                             {% endif %}
                         </div>
                         <div class="card-body">
@@ -40,14 +40,14 @@
                 <div class="col-6">
                     <div class="card">
                         <div class="card-header">
-                            Версия продукта
+                            <h4 class="my-0 font-weight-normal">Версия продукта</h4>
                         </div>
                         <div class="card-body">
                             {{ formset.management_form }}
                             {% for form in formset.forms %}
                                 {{ form.as_p }}
-                                {# if forloop.revcounter0 != 0 #}
-                                {% if not forloop.last %}
+                                {% if forloop.revcounter0 != 0 %}
+                                {# if not forloop.last #}
                                     <hr>
                                 {% endif %}
                             {% endfor %}

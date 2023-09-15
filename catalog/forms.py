@@ -1,4 +1,5 @@
 from django import forms
+from django.contrib.admin.widgets import AdminDateWidget
 
 from catalog.models import Product, News, Version
 
@@ -13,9 +14,15 @@ class StyleFormMixin:
 
 class ProductForm(StyleFormMixin, forms.ModelForm):
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['date_created'].widget = AdminDateWidget(attrs={'type': 'date'})
+        self.fields['date_updated'].widget = AdminDateWidget(attrs={'type': 'date'})
+
     class Meta:
         model = Product
-        fields = '__all__'
+        # fields = '__all__'
+        exclude = ('owner',)
 
     def clean_name(self):
         word_list = ['казино', 'криптовалюта', 'крипта', 'биржа', 'дешево', 'бесплатно', 'обман', 'полиция', 'радар']
