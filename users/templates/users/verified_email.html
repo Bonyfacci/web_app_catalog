@@ -1,0 +1,30 @@
+{% extends 'main/layouts/layout_base.html' %}
+
+{% block title %}Skystore{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+        <div class="card mt-5">
+            <div class="card-header">Подтверждение почты</div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="verification_code">Введите код верификации:</label>
+                        <input type="text" class="form-control" id="verification_code" name="verification_code"
+                               required>
+                    </div>
+                    <button type="submit" class="btn btn-info mt-3">Подтвердить</button>
+                </form>
+            </div>
+            <div class="card-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
