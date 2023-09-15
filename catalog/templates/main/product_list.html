@@ -14,6 +14,7 @@
 <div class="container">
     <div class="row text-center">
         <div class="col-3">
+                {% if user.is_authenticated %}
             <div class="card mb-4 box-shadow">
                 <div class="card-header">
                     <h4 class="my-0 font-weight-normal">Создать продукт</h4>
@@ -25,6 +26,7 @@
                     </div>
                 </div>
             </div>
+                {% endif %}
         </div>
     </div>
     <div class="row text-center">

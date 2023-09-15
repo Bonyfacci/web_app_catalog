@@ -16,7 +16,7 @@
     <div class="row mb-5 featurette box-shadow">
         <div class="col-md-7  text-center">
             <h4 class="my-0 font-weight-normal">{{ object.name|title }}</h4>
-            <p>{{ object.description|slice:10 }}</p>
+            <p>{{ object.owner|default:"-" }}</p>
             <p>{{ object.description }}</p>
         </div>
         <div class="col-md-5 justify-content-center">
@@ -26,9 +26,11 @@
         <div class="row d-grid gap-3 d-md-flex justify-content-md-center text-center">
             <h1 class="card-title pricing-card-title">{{ object.price }} $</h1>
             <button type="button" class="btn btn-lg btn-block btn-outline-primary col-3">Купить</button>
+            {% if object.owner == request.user %}
             <a href="{% url 'catalog:product_edit' object.pk %}" class="btn btn-lg btn-block btn-outline-warning col-3">Редактировать</a>
             <a href="{% url 'catalog:product_delete' object.pk %}"
                class="btn btn-sm btn-block btn-outline-danger col-6">Удалить</a>
+            {% endif %}
         </div>
     </div>
     <div class="col-12 text-center mb-5">

@@ -1,80 +1,202 @@
 [
-    {
-        "model": "catalog.product",
-        "pk": 1,
-        "fields": {
-            "name": "Яблоко",
-            "description": "Зеленое",
-            "photo": "",
-            "category": 1,
-            "price": 50,
-            "date_created": "2023-08-14",
-            "date_updated": null
-        }
-    },
-    {
-        "model": "catalog.product",
-        "pk": 2,
-        "fields": {
-            "name": "Банан",
-            "description": "Желтый",
-            "photo": "",
-            "category": 1,
-            "price": 35,
-            "date_created": "2023-08-14",
-            "date_updated": null
-        }
-    },
-    {
-        "model": "catalog.product",
-        "pk": 3,
-        "fields": {
-            "name": "Телефон",
-            "description": "iPhone",
-            "photo": "",
-            "category": 2,
-            "price": 1000,
-            "date_created": "2023-08-14",
-            "date_updated": null
-        }
-    },
-    {
-        "model": "catalog.product",
-        "pk": 4,
-        "fields": {
-            "name": "Планшет",
-            "description": "iPad",
-            "photo": "",
-            "category": 2,
-            "price": 1500,
-            "date_created": "2023-08-14",
-            "date_updated": null
-        }
-    },
-    {
-        "model": "catalog.product",
-        "pk": 5,
-        "fields": {
-            "name": "Джинсы",
-            "description": "Levis",
-            "photo": "",
-            "category": 3,
-            "price": 200,
-            "date_created": "2023-08-14",
-            "date_updated": null
-        }
-    },
-    {
-        "model": "catalog.product",
-        "pk": 6,
-        "fields": {
-            "name": "Смокинг",
-            "description": "Brioni",
-            "photo": "",
-            "category": 3,
-            "price": 5000,
-            "date_created": "2023-08-14",
-            "date_updated": null
-        }
+  {
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+      "name": "Продукты",
+      "description": "Фрукты\r\nОвощи\r\nПеченье\r\nПеченье\r\nКрекер\r\nХлеб\r\nCroissant\r\nБуррито\r\nРулет с капустой\r\nТорт\r\nБлинчики\r\nСыр\r\nПончики\r\nПельмени\r\nФунь го\r\nХар гоу\r\nВареники\r\nВонтон\r\nКартофель фри\r\nПирожки\r\nЗерновые\r\nЗерновые\r\nПопкорн\r\nРис\r\nМороженое\r\nКартофельное пюре\r\nМясо\r\nГовядина\r\nСтейк\r\nЯйца\r\nСвинина\r\nБекон"
     }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+      "name": "Техника",
+      "description": "Телефон\r\nКомпьютер\r\nБытовая техника\r\nБритвы \r\nВесы напольные\r\nГидромассажные ванночки для ног\r\nДетская серия \r\nМаникюрные наборы\r\nМассажеры\r\nМашинки для стрижки волос \r\nФен-щетки \r\nФены \r\nФотоэпиляторы \r\nЩипцы для укладки волос \r\nЭлектрические зубные щетки \r\nЭлектробигуди \r\nЭпиляторы\r\nДрели и шуруповерты \r\nИзмерительные инструменты \r\nКлеевые пистолеты \r\nЛобзики \r\nПерфораторы \r\nПилы \r\nАлмазные пилы \r\nДисковые (циркулярные) пилы\r\nОтрезные (монтажные) пилы\r\nСабельные пилы, аллигаторы \r\nТорцовочные пилы\r\nЦепные пилы \r\nРаспылители краски \r\nРубанки \r\nСварочные аппараты \r\nСтеплеры \r\nСтроительные пылесосы\r\nФрезеры \r\nШтроборезы \r\nШлифовальные машины \r\nВибрационные шлифовальные машины\r\nЛенточные шлифовальные машины \r\nМногофункциональные шлифовальные машины\r\nУгловые шлифовальные машины (болгарки)\r\nЭксцентриковые шлифовальные машины \r\nРасходные материалы для электроинструментов"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": {
+      "name": "Одежда",
+      "description": "Штаны\r\nРубашка\r\nПиджак\r\nБрюки\r\nГардероб\r\nДжемперы\r\nДжинсы\r\nКалькулятор\r\nКолготки\r\nКроссовки\r\nКупальники\r\nКуртки\r\nНедели Моды\r\nОбувь\r\nОчки\r\nПальто\r\nПиджаки\r\nПлатья\r\nПуховики\r\nРубашки\r\nСвитеры\r\nСумки\r\nТермины\r\nУкрашения\r\nФигура\r\nХуди\r\nЦвета\r\nЧасы\r\nШапки\r\nШарфы Платки\r\nШорты\r\nЮбки"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 105,
+    "fields": {
+      "name": "Яблоко",
+      "description": "Яблоко     Зеле́ное я́блоко — спелый плод яблони культурной, дерева семейства Розовые. Яблоки обладают тонкой съедобной кожурой зеленого цвета, сочной мякотью и небольшими семенами в середине.",
+      "photo": "product/apple_Kl5Hvku.jpg",
+      "category": 1,
+      "price": 50,
+      "date_created": null,
+      "date_updated": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 106,
+    "fields": {
+      "name": "Банан",
+      "description": "Банан     \r\nБана́н — название съедобных плодов культивируемых растений рода Банан (Musa); обычно под таковыми понимают Musa acuminata и Musa × paradisiaca, а также Musa balbisiana, Musa fehi, Musa troglodytarum и ряд других. Также бананами могут называть плоды Ensete ventricosum (строго говоря, являющегося представителем другого рода семейства Банановые). С ботанической точки зрения банан является ягодой, многосеменной и толстокожей. У культурных форм часто отсутствуют семена, ненужные при вегетативном размножении. Плоды имеют длину 6—30 см и диаметр 2—5 см. Соплодия могут состоять из 300 плодов и иметь массу до 50—60 кг.",
+      "photo": "product/banan_OPCVQwo.jpg",
+      "category": 1,
+      "price": 35,
+      "date_created": null,
+      "date_updated": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 107,
+    "fields": {
+      "name": "Телефон",
+      "description": "iPhone     Телефо́н (от др.-греч. τῆλε «расстояние» + φωνή «голос», «звук») — аппарат для передачи и приёма звука (в основном — человеческой речи) на расстоянии. Современные телефоны осуществляют",
+      "photo": "product/iphone_YgjhIeQ.jpg",
+      "category": 2,
+      "price": 1000,
+      "date_created": null,
+      "date_updated": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 108,
+    "fields": {
+      "name": "Планшет",
+      "description": "iPad       Планшетный компьютер (от фр. planchette — дословно «дощечка»; калька с англ. tablet computer), электронный планшет, в просторечии часто планшет — собирательное понятие, включающее",
+      "photo": "product/ipad_6NO0lDA.jpg",
+      "category": 2,
+      "price": 1500,
+      "date_created": null,
+      "date_updated": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 109,
+    "fields": {
+      "name": "Джинсы",
+      "description": "Levis      Джи́нсы — брюки из плотной хлопчатобумажной ткани с проклёпанными стыками швов на карманах. Впервые массово изготовлены в XVII веке моряками из отходов прорвавшихся парусов почти од",
+      "photo": "product/jeans_jAvVsUj.jpg",
+      "category": 3,
+      "price": 200,
+      "date_created": null,
+      "date_updated": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 110,
+    "fields": {
+      "name": "Смокинг",
+      "description": "Brioni     Смо́кинг (англ. smoking jacket, smoking — пиджак), Black tie, Dinner suit или Dinner jacket (в Англии), Tuxedo (в США) — вечерний чёрный или темно-синий костюм, состоящий из пиджак",
+      "photo": "product/smoking_MgdFu6B.jpg",
+      "category": 3,
+      "price": 5000,
+      "date_created": null,
+      "date_updated": null
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 1,
+    "fields": {
+      "product": 106,
+      "version_number": 1,
+      "version_name": "2.0",
+      "current_version": true
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 2,
+    "fields": {
+      "product": 106,
+      "version_number": 2,
+      "version_name": "2.1",
+      "current_version": true
+    }
+  },
+  {
+    "model": "catalog.news",
+    "pk": 1,
+    "fields": {
+      "title": "La UE Castelldefels juega",
+      "slug": "la-ue-castelldefels-juega",
+      "content": "La UE Castelldefels juega hoy sábado 19 de agosto, la eliminatoria de tercera ronda de la Copa Catalunya absoluta.\r\n\r\nLos amarillos reciben a las 19:30h. en su campo de Canyars al CE Europa barcelonés.\r\n\r\nAdemás, a las 19h. en el campo de Can Vinader, la UD Vista Alegre se enfrentará a la UE Sants en su segundo partido de pretemporada.\r\n\r\n(Foto, Piero)\r\n#castelldefels #garraf #begues #barcelona #gavà #gavàmar #botiguessitges #castelldefelsplaya #playacastelldefels #castelldefelspueblo #pueblodecastelldefels #uecastelldefels #uecornellà #fútbol #copacatalunya",
+      "photo": "news/2023-08-19_06-00-08_UTC_q83a0OD.jpg",
+      "created_at": null,
+      "is_active": true,
+      "views_count": 30
+    }
+  },
+  {
+    "model": "catalog.news",
+    "pk": 3,
+    "fields": {
+      "title": "Operación Policía contra el top manta en la playa de Castelldefels",
+      "slug": "Operacion_Policia",
+      "content": "Operación Policía contra el top manta en la playa de Castelldefels\r\n\r\nLa noche de este martes 15 de agosto, agentes de la Policía Local actuaron contra el top manta en la Av. dels Banys sin que se produjera ningún incidente.\r\n\r\nEn la operación policial se intervinieron más de 1.200 productos de material falsificado: ropa, calzado deportivo, ropa interior y relojes.\r\n\r\nPolicía local recuerda que la venta ambulante ilegal es un delito, también para el que compra.\r\n\r\n(Info y foto, Policía Local)\r\n#castelldefels #garraf #begues #barcelona #gavà #gavàmar #botiguessitges #castelldefelsplaya #playacastelldefels #castelldefelspueblo #pueblodecastelldefels #policíalocal #topmanta #ventailegal",
+      "photo": "news/2023-08-17_19-00-39_UTC.jpg",
+      "created_at": "2023-08-22T22:27:23Z",
+      "is_active": true,
+      "views_count": 12
+    }
+  },
+  {
+    "model": "catalog.news",
+    "pk": 5,
+    "fields": {
+      "title": "\"Doctor Strange en el multiverso de la locura\" al cicle Cinema entre Palmeres.",
+      "slug": "Doctor_Strange",
+      "content": "\"Doctor Strange en el multiverso de la locura\" al cicle Cinema entre Palmeres.\r\n\r\nAvui dijous a les 22h. a la Plaça de les Palmeres (platja de Castelldefels) \"Doctor Strange en el multiverso de la locura\" dintre del cicle Cinema entre Palmeres a l’aire lliure gratuit els mesos de juliol i agost.\r\n\r\nLes projeccions serán en català o castellà i subtitulades en anglès.\r\n\r\nPrograma estiu 2023.\r\n\r\nDijous 24 d’agost: Minions El origen de Gru\r\nDijous 31 d’agost: Animales fantásticos 3 – Los secretos de Dumbledore\r\n\r\nViu Castelldefels.\r\nCastelldefels Viu l'estiu.\r\n\r\n(Info, el Castell)\r\n#castelldefels #garraf #begues #barcelona #gavà #gavàmar #botiguessitges #castelldefelsplaya #playacastelldefels #castelldefelspueblo #pueblodecastelldefels #enamoradodecastelldefels #Lightyear #cinemaentrepalmeres #plaçapalmeras",
+      "photo": "news/2023-08-17_06-00-09_UTC.jpg",
+      "created_at": "2023-08-22T22:26:34Z",
+      "is_active": true,
+      "views_count": 26
+    }
+  },
+  {
+    "model": "catalog.news",
+    "pk": 6,
+    "fields": {
+      "title": "BOOOON DIA, CASTELLDEFELS !!!",
+      "slug": "boooon-dia-castelldefels-",
+      "content": "BOOOON DIA, CASTELLDEFELS !!!\r\n\r\nJueves 17 de agosto. Sol con alguna que otra nube y altas temperaturas, con mínimas de 24º y máximas de 31º. Misma predicción para mañana viernes.\r\n\r\nViu Castelldefels\r\nCastelldefels Viu.\r\n\r\n(Foto archivo)\r\n#castelldefels #garraf #begues #barcelona #gavà #gavàmar #botiguessitges #castelldefelsplaya #playacastelldefels #castelldefelspueblo #pueblodecastelldefels #enamoradodecastelldefels #agosto #felizsemana #jueves",
+      "photo": "news/2018-04-04_15-20-05_UTC_profile_pic.jpg",
+      "created_at": null,
+      "is_active": true,
+      "views_count": 26
+    }
+  },
+  {
+    "model": "catalog.news",
+    "pk": 7,
+    "fields": {
+      "title": "Привет!",
+      "slug": "privet",
+      "content": "врфовтфл",
+      "photo": "",
+      "created_at": null,
+      "is_active": false,
+      "views_count": 8
+    }
+  },
+  {
+    "model": "catalog.news",
+    "pk": 10,
+    "fields": {
+      "title": "efse",
+      "slug": "efse",
+      "content": "fawfafwawf",
+      "photo": "news/2023-08-17_19-00-39_UTC_xKjAxaH.jpg",
+      "created_at": null,
+      "is_active": true,
+      "views_count": 0
+    }
+  }
 ]

@@ -63,6 +63,37 @@
                             </svg>
                             Мой проект</a>
                     </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="p-2 btn btn-outline-info" href="{% url 'users:profile' %}">
+                            <svg class="bi d-block mx-auto mb-1" width="48" height="48">
+                                <use xlink:href="#home"/>
+                            </svg>
+                            Профиль</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="p-2 btn btn-outline-info" href="{% url 'users:logout' %}">
+                            <svg class="bi d-block mx-auto mb-1" width="48" height="48">
+                                <use xlink:href="#home"/>
+                            </svg>
+                            Выйти</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="p-2 btn btn-outline-info" href="{% url 'users:login' %}">
+                            <svg class="bi d-block mx-auto mb-1" width="48" height="48">
+                                <use xlink:href="#home"/>
+                            </svg>
+                            Войти</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="p-2 btn btn-outline-info" href="{% url 'users:register' %}">
+                            <svg class="bi d-block mx-auto mb-1" width="48" height="48">
+                                <use xlink:href="#home"/>
+                            </svg>
+                            Регистрация</a>
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
