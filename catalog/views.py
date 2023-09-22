@@ -7,6 +7,7 @@ from pytils.translit import slugify
 
 from catalog.forms import ProductForm, NewsForm, VersionForm
 from catalog.models import Product, Category, News, Version
+from catalog.services import get_categories_list
 
 
 class HomeListView(ListView):
@@ -15,6 +16,14 @@ class HomeListView(ListView):
     extra_context = {
         'title': f'Каталог товаров'
     }
+
+    def get_context_data(self, **kwargs):
+        context_data = super().get_context_data(**kwargs)
+
+        categories_list = get_categories_list()
+
+        context_data['categories'] = categories_list
+        return context_data
 
 
 class ProductListView(ListView):
